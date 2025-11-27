@@ -42,3 +42,12 @@ fp-info-cache
 *.drl
 *.gbr*
 *.rpt
+
+# Firmware / Arduino
+firmware/secrets.h
+firmware/CLAUDE.md
+firmware/*.o
+firmware/*.elf
+firmware/*.hex
+firmware/*.bin
+firmware/build/

@@ -1,6 +1,10 @@
 # Server Rack Fan & Light Controller PCB
 Provides control for server rack electronics using ESP32.
 
+## Firmware
+
+ESP32 firmware with temperature-controlled fans and MQTT monitoring is available in the [firmware/](./firmware/) directory.
+
 PCB Mounted Components
 
 - J1:	Front Connections - 8 pin Dupont connector
