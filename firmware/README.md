@@ -28,6 +28,12 @@ ESP32 firmware for the Server Rack Fan & Light Controller.
    - Open Serial Monitor at 115200 baud
    - View temperature, fan speeds, and door status
 
+4. **Calibrate temperature (if needed):**
+   - ESP32 ADC can be inaccurate (±10-15°C)
+   - Compare reading to known accurate thermometer
+   - Adjust `TEMP_CALIBRATION_OFFSET` in firmware (line 49)
+   - Default offset: 11.0°C (compensates for typical ADC error)
+
 ## MQTT Topics
 
 All topics are published with retain flag:
@@ -41,12 +47,3 @@ All topics are published with retain flag:
 - `fan_controller/sensor_status` - Sensor health (ok/failed)
 - `fan_controller/status` - Device status (online/offline)
 
-## Documentation
-
-See [CLAUDE.md](./CLAUDE.md) for detailed documentation including:
-- Build instructions
-- Hardware pin assignments
-- Code architecture
-- Temperature sensor validation
-- Memory management
-- MQTT integration details
